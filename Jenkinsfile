@@ -8,6 +8,10 @@ pipeline {
                 git url:"https://github.com/xB0t/django-notes-app.git", branch: "main"
             }
         }
+        stage('Initialize'){
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+            }
         stage("Build"){
             steps {
                 echo "Building the image"
