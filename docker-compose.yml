@@ -1,6 +1,11 @@
 version : "3.3"
 services :
   web :
-     image : trainwithshubham/my-note-app:latest
+     image : xb0t/django-notes-app
      ports :
-         - "8000:8000"
+         - "8000"
+         
+networks:
+  default:
+    name: yash_network
+    external: true
