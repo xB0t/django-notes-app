@@ -9,4 +9,5 @@ COPY . /app/backend
 
 EXPOSE 8000
 
-CMD python /app/backend/manage.py runserver 0.0.0.0:8000
+# CMD python /app/backend/manage.py runserver 0.0.0.0:8000
+CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "mysite.wsgi:application"]
