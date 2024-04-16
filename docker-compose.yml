@@ -3,9 +3,4 @@ services :
   web :
      image : xb0t/django-notes-app
      ports :
-         - "8000"
-         
-networks:
-  default:
-    name: yash_network
-    external: true
+         - "32771:8000"
