@@ -3,4 +3,4 @@ services :
   web :
      image : xb0t/django-notes-app
      ports :
-         - "32771:8000"
+         - "32772:8000"
